@@ -1,8 +1,9 @@
 {
   "name": "@frost084/use-slider-hook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom hook for creating a slider with auto-scroll, loop functionality, progress tracking, and more.",
   "main": "dist/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "babel src --out-dir dist",
     "prepublishOnly": "npm run build"
@@ -33,7 +34,8 @@
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9"
+    "@babel/preset-react": "^7.25.9",
+    "@types/react": "^18.3.12"
   },
   "repository": {
     "type": "git",

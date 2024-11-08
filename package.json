@@ -1,0 +1,41 @@
+{
+  "name": "@frost084/use-slider-hook",
+  "version": "1.0.0",
+  "description": "Custom hook for creating a slider with auto-scroll, loop functionality, progress tracking, and more.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TheFrost",
+  "keywords": [
+    "react",
+    "hook",
+    "slider",
+    "carousel",
+    "useSlider",
+    "progress",
+    "auto-scroll",
+    "loop",
+    "navigation",
+    "custom-hook",
+    "animation",
+    "react-component",
+    "bullet-progress",
+    "react-slider",
+    "slide-transition",
+    "UI-component",
+    "frontend",
+    "user-interface",
+    "Frost-Creative"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheFrost/use-slider-hook.git"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@frost084/use-slider-hook",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Custom hook for creating a slider with auto-scroll, loop functionality, progress tracking, and more.",
   "main": "dist/index.js",
   "scripts": {

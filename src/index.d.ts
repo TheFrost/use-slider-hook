@@ -2,110 +2,53 @@
 import { RefObject } from 'react';
 
 /**
- * Options for configuring the useSlider hook.
+ * Configuration options for the useSlider hook
  */
-export interface UseSliderOptions {
-  /**
-   * Enables automatic scrolling of the slider.
-   * @default false
-   */
+export interface UseSliderConfig {
+  /** Enable automatic slide transition */
   autoScroll?: boolean;
-
-  /**
-   * Determines if the slider should loop back to the first slide after reaching the last slide.
-   * @default true
-   */
+  /** Loop back to the first slide when reaching the last */
   loop?: boolean;
-
-  /**
-   * Time in milliseconds for each slide transition during auto-scroll.
-   * @default 3000
-   */
+  /** Transition duration in milliseconds */
   speed?: number;
-
-  /**
-   * Total number of slides in the slider.
-   * This is required to calculate progress and looping.
-   */
+  /** Total number of slides */
   totalSlides: number;
 }
 
 /**
- * Return values and functions from the useSlider hook.
+ * The return type for the useSlider hook, describing the states and functions available
  */
 export interface UseSliderReturn {
-  /**
-   * The current slide index.
-   */
+  /** Current slide index */
   currentSlide: number;
-
-  /**
-   * The index of the previous slide.
-   */
+  /** Previous slide index */
   prevIndex: number;
-
-  /**
-   * The index of the next slide.
-   */
+  /** Next slide index */
   nextIndex: number;
-
-  /**
-   * Function to go to the next slide.
-   */
+  /** Go to the next slide */
   nextSlide: () => void;
-
-  /**
-   * Function to go to the previous slide.
-   */
+  /** Go to the previous slide */
   prevSlide: () => void;
-
-  /**
-   * Function to go to a specific slide by index.
-   * @param index The index of the slide to navigate to.
-   */
+  /** Go to a specific slide by index */
   goToSlide: (index: number) => void;
-
-  /**
-   * Progress of the current slide's time, ranging from 0 to 100.
-   * Only updates when autoScroll is enabled.
-   */
+  /** Progress of the current slide time (0 to 100%) */
   slideTimeProgress: number;
-
-  /**
-   * Total progress of the slider based on the number of slides,
-   * ranging from 0 to 100.
-   */
+  /** Total progress across all slides (0 to 100%) */
   totalProgress: number;
-
-  /**
-   * Progress across the entire loop of slides (0 to 100),
-   * resetting after reaching the last slide.
-   */
+  /** Overall loop progress (0 to 100%) */
   loopProgress: number;
-
-  /**
-   * Bullet progress, indicating the position within the slider in terms of bullets (0 to 100).
-   */
+  /** Bullet progress for indicating slide position (0 to 100%) */
   bulletProgress: number;
-
-  /**
-   * Current direction of slide transition, either 'next' or 'prev'.
-   */
+  /** Current transition direction ('next' or 'prev') */
   direction: 'next' | 'prev';
-
-  /**
-   * Ref to the slider container for visibility tracking and other DOM-related operations.
-   */
+  /** Ref for the slider container to observe visibility */
   sliderRef: RefObject<HTMLDivElement>;
 }
 
 /**
- * A custom React hook for managing a slider with auto-scroll, looping, progress tracking,
- * and directional navigation.
+ * Custom hook for managing a slider with various states and functionalities
  * 
- * @param options Configuration options for the slider.
- * @returns An object with the current state and functions for controlling the slider.
+ * @param config - Configuration options for the slider
+ * @returns An object containing the slider's state and control functions
  */
-declare function useSlider(options: UseSliderOptions): UseSliderReturn;
-
-export default useSlider;
+export function useSlider(config: UseSliderConfig): UseSliderReturn;
